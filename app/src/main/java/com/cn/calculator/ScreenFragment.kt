@@ -55,6 +55,18 @@ class ScreenFragment : BaseFragment<FragmentScreenBinding>(), MessageListener {
                         }
                 }
             }
+            "+-" -> {
+                binding.tvCurrent.text.let {
+                    if (it.isNotEmpty()) {
+                        if (it[0] == '-') {
+                            binding.tvCurrent.text = it.substring(0, it.length - 1)
+                        }
+                        else {
+                            binding.tvCurrent.text = "-$it"
+                        }
+                    }
+                }
+            }
             "del" -> {
                 binding.tvCurrent.text.let {
                     if (it.isNotEmpty()) {

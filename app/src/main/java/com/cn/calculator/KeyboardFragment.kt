@@ -71,5 +71,8 @@ class KeyboardFragment: BaseFragment<FragmentKeyboardBinding>() {
         binding.btnPercent.setOnClickListener {
             send(MainActivity.SCREEN_TAG, "%")
         }
+        binding.btnReverse.setOnClickListener {
+            send(MainActivity.SCREEN_TAG, "+-")
+        }
     }
 }
